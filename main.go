@@ -16,7 +16,7 @@ func main() {
 }
 
 func ProfileHandler(w http.ResponseWriter, r *http.Request) {
-	profile := Profile("Alex", []string{"snowboarding", "programming"})
+	profile := Profile{"Alex", []string{"snowboarding", "programming"}}
 
 	js, err := json.Marshal(profile)
 	if err != nil {
